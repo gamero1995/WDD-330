@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Notes and Code Example</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<nav>
+    <ul id="menu"></ul>
+</nav>
+
+<body>
+    <header>
+        <h1>Week 1 Notes and Codes</h1>
+    </header>
+    <main>
+        <h2>Notes</h2>
+        <p>When looping through an array. It will be better if you use a For each. You will not have to specify the size
+            fo the array.
+            It will do a certain action according to how many object the array contains.
+            See Example below.
+        </p>
+        <h2>Code Examples</h2>
+        <p>Looping through an array using a For Each</p>
+        <pre>
+            <code>
+var fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+function myFunction(item, index) {
+  document.getElementById("demo").innerHTML += index 
+  + ":" + item + "<br>"; 
+}
+            </code>
+            </pre>
+        <p>CSS Code found to center image:</p>
+        <pre>
+<code>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</code>
+</pre>
+
+    </main>
+</body>
+<footer></footer>
+<script src="../js/main.js"></script>
+
+</html>
