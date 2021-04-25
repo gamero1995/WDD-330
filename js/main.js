@@ -1,11 +1,11 @@
 const links = [
     {
         label: "Home",
-        url: "/index.html"
+        url: "WDD-330/index.html"
     },
     {
         label: "Week 1 notes & Code Examples",
-        url: "/week1/index.html"
+        url: "WDD-330/week1/index.html"
     }
 ]
 
