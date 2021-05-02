@@ -1,3 +1,10 @@
+// chapter 2 - Quiz ninja
+function supermanName() {
+    const question = "What is Superman's real name?"
+    const answer = prompt(question);
+    alert(`You answered ${answer}`);
+}
+
 // Functions created for Team Assignment
 function getValues() {
 

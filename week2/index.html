@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 1 Notes and Code Example</title>
+    <title>Week 2</title>
     <link rel="stylesheet" href="../index.css">
 </head>
 <nav>
@@ -14,53 +14,48 @@
 
 <body>
     <header>
-        <h1>Week 1 Notes, Codes and Team Work</h1>
+        <h1>Week 2 Notes, Codes and Team Work</h1>
     </header>
     <main>
-        <h2>Notes</h2>
+        <h2 id="contentSections">Notes</h2>
+        <h3>Chapter 2</h3>
+        The following words are reserved word in JS. This means that you should not use them to name variables, etc.<br>
+        abstract, await, boolean, break, byte, case, catch, char, class<br><br>
+        Primitave data types are: String, Symbol, Number, Boolean, Undefined, Null <br><br>
+        If you assign a non-primitive value to a variable, then this is done by reference, so any changes that are
+        subsequently made will affect all references to that object:
+        <pre>
+<code>
+c = { value: 1 };<br>
+let d = c; // c.value = 1, d.value = 1<br>
+d.value = 2; // c.value = 2, d.value = 2
+</code>
+</pre>
+        You can add Javascript inside your string by placing it inside curly braces with a $ character in front of them.
+        This is then evaluated and the result is returned in the string output.
+
+
+
         <p>When looping through an array. It will be better if you use a For each. You will not have to specify the size
             fo the array.
             It will do a certain action according to how many object the array contains.
             See Example below.
         </p>
 
-        <h2>Code Examples</h2>
-        <p>Looping through an array using a For Each</p>
-        <pre>
-            <code>
-var fruits = ["apple", "orange", "cherry"];
-fruits.forEach(myFunction);
+        <h2 id="contentSections">Code Examples</h2>
+        <h3>Chapter 2 Activity</h3>
+        <button onclick="supermanName()">Question 1</button>
 
-function myFunction(item, index) {
-  document.getElementById("demo").innerHTML += index 
-  + ":" + item + "<br>"; 
-}
-            </code>
-            </pre>
-        <p>CSS Code found to center image:</p>
-        <pre>
-<code>
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-</code>
-</pre>
-
-        <h2>Team Work</h2>
+        <h2 id="contentSections">Team Work</h2>
         <h3>This function saves input</h3>
         <input id="number" type="text" />
         <button onclick="getValues()">Save</button>
         <div id="outputDiv"></div>
-        <hr>
 
         <h3>This function adds number</h3>
         <input id="value" type="text" />
         <button onclick="addNumber()">Run</button>
         <div id="sumOutput"></div>
-        <hr>
 
         <h3>This function adds number</h3>
         <input id="number1" type="text" />
