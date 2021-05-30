@@ -6,7 +6,6 @@ tasks = JSON.parse(localStorage.getItem("todos"))
 
 displayTaks();
 
-
 function displayTaks() {
     let ul = document.querySelector('ul');
     ul.innerHTML = "";
