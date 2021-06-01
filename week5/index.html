@@ -19,54 +19,41 @@
     </header>
     <main>
         <h2 id="contentSections">Notes & Code</h2>
-        <h3>This</h3>
-        <p>To access the object, a method can use the this keyword. <br>
-            In JavaScript, keyword this behaves unlike most other programming languages. It can be used in any function,
-            even if it’s not a method of an object.<br>
-            Arrow functions are special: they don’t have their “own” this. If we reference this from such a function,
-            it’s taken from the outer “normal” function.</p>
+
+        The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code.
+        Because alert() stops a program from running until OK is clicked, it allows us to effectively put breakpoints in
+        the code that let us check the value of variables at that point to see if they’re what we expect them to be.
+        <br>
         <pre>
 <code>
-    let user = {
-        name: "John",
-        age: 30,
-      
-        sayHi() {
-          // "this" is the "current object"
-          alert(this.name);
+    function amIOldEnough(age){
+        if (age = 12) {
+        alert(age);
+            return 'No, sorry.';
+        } else if (age < 18) {
+            return 'Only if you are accompanied by an adult.';
         }
-      
-      };
-      user.sayHi(); // John
+        else {
+            return 'Yep, come on in!';
+        }
+        }
 </code>
         </pre>
 
-        We can loop through all of an object’s properties and methods by using a for in loop. For example, to log all
-        the properties of the superman object to the console, we could use:
+        If we suspect a piece of code will result in an exception, we can wrap it in a try block. This will run the code
+        inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch
+        block.
         <pre>
 <code>
-    for(const key in superman) {
-        console.log(key + ": " + superman[key]);
-        }
-    Output:
-        "name: Superman"
-        "real name: Clark Kent"
-        "height: 75"
-        "weight: 235"
-        "hero: true"
-        "villain: false"
-        "allies: Batman,Supergirl,Superboy"
-        "fly: function () console.log(\"Up, up and away!\");
-        }"
+    function imaginarySquareRoot(number) {
+        'use strict';
+try {
+return String(squareRoot(number));
+} catch(error) {
+return squareRoot(-number)+'i';
+}
+}
 </code>
-        </pre>
-
-        In this example, we create a variable called key. We then iterate over the properties of the superman object and
-        use key to log the property name and superman[key] to look up the value of each property.
-        Any property can be removed from an object using the delete operator. For example, if we wanted to remove the
-        fly method from the superman object, we would enter the following:
-        <pre>
-<code>delete superman.fly</code>
         </pre>
 
         <h2 id="contentSections">Team Work</h2>
