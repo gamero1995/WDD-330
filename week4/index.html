@@ -19,54 +19,32 @@
     </header>
     <main>
         <h2 id="contentSections">Notes & Code</h2>
-        <h3>This</h3>
-        <p>To access the object, a method can use the this keyword. <br>
-            In JavaScript, keyword this behaves unlike most other programming languages. It can be used in any function,
-            even if it’s not a method of an object.<br>
-            Arrow functions are special: they don’t have their “own” this. If we reference this from such a function,
-            it’s taken from the outer “normal” function.</p>
+        <p>Traditionally, when a form was submitted, it would be sent to a server where the information would be
+            processed using a 'back end' language such as PHP or Ruby<br><br>
+            Instead of using a numerical index, we can use the name attribute to identify a form: <br>
+
         <pre>
 <code>
-    let user = {
-        name: "John",
-        age: 30,
-      
-        sayHi() {
-          // "this" is the "current object"
-          alert(this.name);
-        }
-      
-      };
-      user.sayHi(); // John
+const form = document.forms['search'];
 </code>
         </pre>
 
-        We can loop through all of an object’s properties and methods by using a for in loop. For example, to log all
-        the properties of the superman object to the console, we could use:
+        We can also access the form controls using their 'name' attributes as if it was a property of the form object.
+        So, for example, the input field has a name attribute of searchInput and can be accessed using this code:
         <pre>
 <code>
-    for(const key in superman) {
-        console.log(key + ": " + superman[key]);
-        }
-    Output:
-        "name: Superman"
-        "real name: Clark Kent"
-        "height: 75"
-        "weight: 235"
-        "hero: true"
-        "villain: false"
-        "allies: Batman,Supergirl,Superboy"
-        "fly: function () console.log(\"Up, up and away!\");
-        }"
+    const input = form['searchInput']
 </code>
         </pre>
 
-        In this example, we create a variable called key. We then iterate over the properties of the superman object and
-        use key to log the property name and superman[key] to look up the value of each property.
-        Any property can be removed from an object using the delete operator. For example, if we wanted to remove the
-        fly method from the superman object, we would enter the following:
+        The focus event occurs when an element is focused on. In the case of an input element, this is when the cursor
+        is placed inside the element (either by clicking or tapping on it or navigating to it using the keyboard).
+
         <pre>
-<code>delete superman.fly</code>
+<code>
+    const input = form.elements.searchInput;
+    input.addEventListener('focus', () => alert('focused'), false);
+</code>
         </pre>
 
         <h2 id="contentSections">Team Work</h2>
