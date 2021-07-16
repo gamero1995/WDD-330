@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potty Tracker App</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <form action="" id="setUp">
+        Name: <input type="text" id="name"><br><br>
+        Days: <input type="text" id="days">
+
+        <p>Please select your theme:</p>
+        <input type="radio" id="Frozen" name="theme" value="frozen">
+        <label for="Frozen">Frozen</label><br>
+        <input type="radio" id="Pokemon" name="theme" value="pokemon">
+        <label for="Pokemon">Pokemon</label><br>
+        <input type="radio" id="Paw" name="theme" value="paw">
+        <label for="Paw">Paw Patrol</label><br>
+
+        <input type="button" value="Done" id="submit">
+    </form>
+    <div id="app">
+        <div id="banner"></div>
+        <ul id="calendar">
+        </ul>
+    </div>
+
+    <audio data-key="65" src="kids_cheering.mp3"></audio>
+</body>
+
+<script src="control.js" type="module"></script>
+
+</html>
