@@ -23,10 +23,15 @@ document.getElementById('submit').addEventListener('click', (e) => {
     }
 
     let banner = document.querySelector('#banner');
-    banner.innerHTML =
-        `<img src="${theme}.jpeg" alt="${theme}"><br>
-        <h2>${name}'s Potty Tracker</h2><br>
-    `;
+    banner.classList.remove('hidden');
+    banner.style.backgroundImage = "url(" + theme + ".jpeg";
+    banner.alt = theme;
+
+    let appContent = document.querySelector('#app-content');
+    appContent.classList.remove('hidden');
+
+    let appTitle = document.querySelector('#app-title');
+    appTitle.innerHTML = `${name}'s Potty Tracker`;
 
     let ul = document.getElementById("calendar")
     for (let i = 1; i <= numberOfDays; i++) {
@@ -50,7 +55,8 @@ document.getElementById('submit').addEventListener('click', (e) => {
             let currentId = event.srcElement.innerHTML
             days[currentId - 1].Completed = !days[currentId - 1].Completed;
 
-            document.getElementById(currentId).style.background = '#000000'
+            document.getElementById(currentId).style.background = 'darkcyan';
+            document.getElementById(currentId).style.color = 'white';
             document.getElementById(currentId).disabled = true;
 
         })

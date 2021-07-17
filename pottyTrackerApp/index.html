@@ -7,14 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potty Tracker App</title>
     <link rel="stylesheet" href="./app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <form action="" id="setUp">
-        Name: <input type="text" id="name"><br><br>
-        Days: <input type="text" id="days">
+        <label class='input-label'>
+            Name: <input type="text" id="name">
+        </label>
+        <label class='input-label'>
+            Days: <input type="text" id="days">
+        </label>
 
         <p>Please select your theme:</p>
+
         <input type="radio" id="Frozen" name="theme" value="frozen">
         <label for="Frozen">Frozen</label><br>
         <input type="radio" id="Pokemon" name="theme" value="pokemon">
@@ -25,9 +33,12 @@
         <input type="button" value="Done" id="submit">
     </form>
     <div id="app">
-        <div id="banner"></div>
-        <ul id="calendar">
-        </ul>
+        <div id="banner" class="hidden"></div>
+        <div id="app-content" class="hidden">
+            <h2 id="app-title"></h2>
+            <ul id="calendar">
+            </ul>
+        </div>
     </div>
 
     <audio data-key="65" src="kids_cheering.mp3"></audio>
