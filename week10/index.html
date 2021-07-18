@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 5</title>
+    <title>Week 10</title>
     <link rel="stylesheet" href="../index.css">
 
 </head>
@@ -15,49 +15,87 @@
 
 <body>
     <header>
-        <h1>Week 5 Notes, Codes and Team Work</h1>
+        <h1>Week 10 Notes, Codes and Team Work</h1>
     </header>
     <main>
         <h2 id="contentSections">Notes & Code</h2>
-
-        The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code.
-        Because alert() stops a program from running until OK is clicked, it allows us to effectively put breakpoints in
-        the code that let us check the value of variables at that point to see if they’re what we expect them to be.
+        type: Specifies whether the data needs to be a number, an email address, or some other specific preset type.
         <br>
+        pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.
+        <br>
+        The element matches the :valid CSS pseudo-class, which lets you apply a specific style to valid elements. <br>
+        <br>
+        A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so
+        regexps are ideal for form validation and serve a variety of other uses in JavaScript.
         <pre>
 <code>
-    function amIOldEnough(age){
-        if (age = 12) {
-        alert(age);
-            return 'No, sorry.';
-        } else if (age < 18) {
-            return 'Only if you are accompanied by an adult.';
-        }
-        else {
-            return 'Yep, come on in!';
-        }
-        }
+a — Matches one character that is a 
+(not b, not aa, and so on).
+
+abc — Matches a, followed by b, 
+followed by c.
+
+ab?c—Matches a, optionally followed by a 
+single b, followed by c. ( ac or abc)
+
+ab*c—Matches a, optionally followed by any number
+ of bs, followed by c. ( ac , abc, abbbbbc, and 
+ so on).
+
+a|b — Matches one character that is a or b.
+
+abc|xyz — Matches exactly abc or exactly xyz (
+    but not abcxyz or a or y, and so on).
+
 </code>
         </pre>
 
-        If we suspect a piece of code will result in an exception, we can wrap it in a try block. This will run the code
-        inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch
-        block.
+        The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as
+        requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch
+        resources asynchronously across the network. <br>
         <pre>
 <code>
-    function imaginarySquareRoot(number) {
-        'use strict';
-try {
-return String(squareRoot(number));
-} catch(error) {
-return squareRoot(-number)+'i';
-}
-}
+fetch('http://example.com/movies.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
 </code>
         </pre>
+
+        To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add
+        credentials: 'include' to the init object you pass to the fetch() method.
+
+        <pre>
+<code>
+fetch('https://example.com', {
+  credentials: 'include'
+});
+</code>
+        </pre>
+
+        Use fetch() to POST JSON-encoded data.
+        <pre>
+<code>
+const data = { username: 'example' };
+
+fetch('https://example.com/profile', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+</code>
+</pre>
+
 
         <h2 id="contentSections">Team Work</h2>
-        <a href="team.html">Hikes App</a>
 
     </main>
 </body>

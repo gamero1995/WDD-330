@@ -44,8 +44,8 @@ const links = [
         url: "week10/index.html"
     },
     {
-        label: "Week 11 notes, Code Examples and Team Work",
-        url: "week10/index.html"
+        label: "Week 11 - Authentication",
+        url: "week11/client/week11.html"
     },
     {
         label: "Bock Challenge 2 - Potty Tracker",
