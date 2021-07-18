@@ -1,8 +1,31 @@
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+} 
+
+#menu a:link {
+  text-decoration: none;
+}
+
+#menu a:visited {
+  text-decoration: none;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
+
+#menu a:active {
+  text-decoration: underline;
+}
+
 pre code {
     background-color: #eee;
     border: 1px solid #999;
     display: block;
     padding: 20px;
+
   }
 
 #contentSections {

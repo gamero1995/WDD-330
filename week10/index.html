@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+    <link rel="stylesheet" href="../index.css">
+
+</head>
+<nav>
+    <ul id="menu"></ul>
+</nav>
+
+<body>
+    <header>
+        <h1>Week 5 Notes, Codes and Team Work</h1>
+    </header>
+    <main>
+        <h2 id="contentSections">Notes & Code</h2>
+
+        The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code.
+        Because alert() stops a program from running until OK is clicked, it allows us to effectively put breakpoints in
+        the code that let us check the value of variables at that point to see if they’re what we expect them to be.
+        <br>
+        <pre>
+<code>
+    function amIOldEnough(age){
+        if (age = 12) {
+        alert(age);
+            return 'No, sorry.';
+        } else if (age < 18) {
+            return 'Only if you are accompanied by an adult.';
+        }
+        else {
+            return 'Yep, come on in!';
+        }
+        }
+</code>
+        </pre>
+
+        If we suspect a piece of code will result in an exception, we can wrap it in a try block. This will run the code
+        inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch
+        block.
+        <pre>
+<code>
+    function imaginarySquareRoot(number) {
+        'use strict';
+try {
+return String(squareRoot(number));
+} catch(error) {
+return squareRoot(-number)+'i';
+}
+}
+</code>
+        </pre>
+
+        <h2 id="contentSections">Team Work</h2>
+        <a href="team.html">Hikes App</a>
+
+    </main>
+</body>
+<footer></footer>
+<script src="../js/week.js"></script>
+
+</html>

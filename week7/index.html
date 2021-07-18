@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7</title>
+    <link rel="stylesheet" href="../index.css">
+
+</head>
+<nav>
+    <ul id="menu"></ul>
+</nav>
+
+<body>
+    <header>
+        <h1>Week 7 Notes, Codes and Team Work</h1>
+    </header>
+    <main>
+        <h2 id="contentSections">Notes & Code</h2>
+
+        All functions have a length property that returns the number of parameters the function has.
+        <br><br>
+        There is nothing to stop you adding your own properties to functions in the same way that you can add properties
+        to any object in JavaScript. <br>For example: you could add a description property to a function that describes
+        what
+        it does:<br>
+        square.description = 'Squares a number that is provided as an argument'<br><br>
+
+        An Immediately Invoked Function Expression – or IIFE – (pronounced 'iffy') is an anonymous function that, as the
+        name suggests, is invoked as soon as it’s defined. This is easily achieved by placing parentheses at the end of
+        the function definition (remember we use parentheses to invoke a function). The function also has to be made
+        into an expression, which is done by placing the whole declaration inside parentheses
+        <pre>
+<code>
+(function(){
+    const temp = 'World';
+    console.log(`Hello ${temp}`);
+    })();
+</code>
+        </pre>
+
+        APIS = An application programming interface (API) is a collection of methods that allows external access to
+        another program or service <br><br>
+        The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the
+        resource you wish to fetch.
+        <pre>
+<code>
+fetch('https://example.com/data')
+  .then( // code that handles the response )
+  .catch( // code that runs if the server returns 
+              an er
+</code>
+        </pre>
+        Although most of the time you will be dealing with a response object that is returned from a request you make,
+        you can also create your own response objects using a constructor function:
+
+        <pre>
+<code>
+const response = new Response( 'Hello!', {
+ok: true,
+status: 200,
+statusText: 'OK',
+type: 'cors',
+url: '/api'
+});
+</code>
+                    </pre>
+
+
+        <h2 id="contentSections">Team Work</h2>
+        <a href="team.html">Hikes App</a>
+
+    </main>
+</body>
+<footer></footer>
+<script src="../js/week.js"></script>
+
+</html>
