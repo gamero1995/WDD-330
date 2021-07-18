@@ -20,44 +20,48 @@
     <main>
         <h2 id="contentSections">Notes & Code</h2>
 
-        The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code.
-        Because alert() stops a program from running until OK is clicked, it allows us to effectively put breakpoints in
-        the code that let us check the value of variables at that point to see if they’re what we expect them to be.
+        The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew
+        any element on the page <br>
+        Translation functions allow you to move elements left, right, up, or down. These
+        functions are similar to the behavior of position: relative; when declaring top
+        and left, moving elements up and down or left and right along the x and y axes. <br><br>
+        The scale(x,y) function scales an element by the defined factors horizontally then
+        vertically. If only one value is provided, it will be used for both the x and y values,
+        growing or shrinking your element or pseudo-element while maintaining the original
+        aspect ratio.
         <br>
         <pre>
 <code>
-    function amIOldEnough(age){
-        if (age = 12) {
-        alert(age);
-            return 'No, sorry.';
-        } else if (age < 18) {
-            return 'Only if you are accompanied by an adult.';
-        }
-        else {
-            return 'Yep, come on in!';
-        }
-        }
+.ad-ad2 h1:hover span {
+  color: #484848;
+  transform: translateX(40px) 
+  scale(1.5);
+}
 </code>
         </pre>
-
-        If we suspect a piece of code will result in an exception, we can wrap it in a try block. This will run the code
-        inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch
-        block.
+        The rotate() function rotates an element around the point of origin by a specified
+        angle value. As with scale, by default the point of origin is the element’s center
         <pre>
 <code>
-    function imaginarySquareRoot(number) {
-        'use strict';
-try {
-return String(squareRoot(number));
-} catch(error) {
-return squareRoot(-number)+'i';
-}
+.ad-ad2 h1:hover span {
+  color: #484848;
+  transform: rotate(10deg) translateX(40px) 
+  scale(1.5);
 }
 </code>
         </pre>
+        The skew(x,y) function specifies a skew along the x and y axes. As you’d expect,
+        the x specifies the skew on the x axis, and the y specifies the skew on the y axis. If
+        the second parameter is omitted, the skew will only occur on the x axis
+
+        <pre>
+<code>
+transform: skew(15deg, 4deg);
+</code>
+</pre>
 
         <h2 id="contentSections">Team Work</h2>
-        <a href="team.html">Hikes App</a>
+        <a href="team.html">API</a>
 
     </main>
 </body>
